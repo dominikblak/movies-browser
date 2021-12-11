@@ -1,21 +1,19 @@
 {
   "files": {
-    "main.js": "/movies-browser/static/js/main.98312dd3.chunk.js",
-    "main.js.map": "/movies-browser/static/js/main.98312dd3.chunk.js.map",
+    "main.js": "/movies-browser/static/js/main.7ef809fc.chunk.js",
+    "main.js.map": "/movies-browser/static/js/main.7ef809fc.chunk.js.map",
     "runtime-main.js": "/movies-browser/static/js/runtime-main.5f0e7bd4.js",
     "runtime-main.js.map": "/movies-browser/static/js/runtime-main.5f0e7bd4.js.map",
-    "static/js/2.440442a4.chunk.js": "/movies-browser/static/js/2.440442a4.chunk.js",
-    "static/js/2.440442a4.chunk.js.map": "/movies-browser/static/js/2.440442a4.chunk.js.map",
+    "static/js/2.1041a37a.chunk.js": "/movies-browser/static/js/2.1041a37a.chunk.js",
+    "static/js/2.1041a37a.chunk.js.map": "/movies-browser/static/js/2.1041a37a.chunk.js.map",
     "static/js/3.d44be9cc.chunk.js": "/movies-browser/static/js/3.d44be9cc.chunk.js",
     "static/js/3.d44be9cc.chunk.js.map": "/movies-browser/static/js/3.d44be9cc.chunk.js.map",
     "index.html": "/movies-browser/index.html",
-    "static/js/2.440442a4.chunk.js.LICENSE.txt": "/movies-browser/static/js/2.440442a4.chunk.js.LICENSE.txt",
+    "static/js/2.1041a37a.chunk.js.LICENSE.txt": "/movies-browser/static/js/2.1041a37a.chunk.js.LICENSE.txt",
     "static/media/danger.a514e9c6.svg": "/movies-browser/static/media/danger.a514e9c6.svg",
     "static/media/emptyPoster.3f42dbe5.svg": "/movies-browser/static/media/emptyPoster.3f42dbe5.svg",
     "static/media/noResult.d286a671.svg": "/movies-browser/static/media/noResult.d286a671.svg",
-    "static/media/poster.910a4e98.jpg": "/movies-browser/static/media/poster.910a4e98.jpg",
     "static/media/search.b7af4217.svg": "/movies-browser/static/media/search.b7af4217.svg",
-    "static/media/slider-background.37caf2f4.jpg": "/movies-browser/static/media/slider-background.37caf2f4.jpg",
     "static/media/spinner.c5f29646.svg": "/movies-browser/static/media/spinner.c5f29646.svg",
     "static/media/star.8663155c.svg": "/movies-browser/static/media/star.8663155c.svg",
     "static/media/vectorLeft.40e7e274.svg": "/movies-browser/static/media/vectorLeft.40e7e274.svg",
@@ -24,7 +22,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.5f0e7bd4.js",
-    "static/js/2.440442a4.chunk.js",
-    "static/js/main.98312dd3.chunk.js"
+    "static/js/2.1041a37a.chunk.js",
+    "static/js/main.7ef809fc.chunk.js"
   ]
 }
