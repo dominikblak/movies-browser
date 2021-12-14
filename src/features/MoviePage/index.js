@@ -2,14 +2,13 @@ import { MovieSlider } from "./MovieSlider";
 import { MovieTileDetails } from "../../common/tiles/MovieTileDetails";
 import Container from "../../common/Container";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchElement, resetState, selectElement, selectError, selectLoading } from "../elementSlice";
+import { fetchCredits, fetchElement, resetState, selectElement, selectError, selectLoading, resetCreditsState, } from "../elementSlice";
 import { useEffect } from "react";
 import { StateChecker } from "../../common/StateChecker";
 import { Header } from "../../common/Header";
 import { useLocation } from "react-router-dom";
 
 export function MoviePage() {
-
     const dispatch = useDispatch();
     const location = useLocation();
     const pathname = location.pathname.substring(14);
@@ -22,7 +21,8 @@ export function MoviePage() {
 
     useEffect(() => {
         dispatch(fetchElement({ id }));
-        return () => resetState();
+        dispatch(fetchCredits({ id }));
+        return () => resetState() && resetCreditsState();
     }, [dispatch, id]);
 
     return (
