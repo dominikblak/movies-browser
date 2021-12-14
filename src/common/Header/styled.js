@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledHeader = styled.header`
-margin: 0 auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -29,6 +29,7 @@ export const TitleWrapper = styled.div`
     align-self: flex-start;
     display: flex;
     align-items: center;
+    height: 100%;
 
     @media(max-width: ${({ theme }) => theme.breakpoint.tabletMax}){
         margin: 0;
