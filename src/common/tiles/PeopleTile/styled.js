@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Content, Image, Wrapper } from "../../../common/tiles/MovieTile/styled";
+import { Title } from "../../../common/tiles/MovieTile/styled";
 
 export const Container = styled(Wrapper)`
     width: 208px;
@@ -15,7 +16,7 @@ export const Container = styled(Wrapper)`
 };
 `;
 
-export const Picture  = styled(Image)`
+export const Picture = styled(Image)`
     max-width: 100%;
     max-height: 264px;
     border-radius: 5px;
@@ -45,4 +46,22 @@ export const ContentPeopleTile = styled(Content)`
     margin: 8px 0px 0px;
     text-align: center;
 };   
+`;
+
+export const Description = styled.p`
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
+
+export const TileHeader = styled(Title)`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
