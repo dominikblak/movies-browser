@@ -2,26 +2,22 @@ import { MovieSlider } from "./MovieSlider";
 import { MovieTileDetails } from "../../common/tiles/MovieTileDetails";
 import Container from "../../common/Container";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCredits, fetchElement, resetState, selectElement, selectError, selectLoading, resetCreditsState, selectCast, selectCredits, } from "../elementSlice";
+import { fetchCredits, fetchElement, resetState, selectElement, selectError, selectLoading, resetCreditsState, selectCredits, } from "../elementSlice";
 import { useEffect } from "react";
 import { StateChecker } from "../../common/StateChecker";
 import { Header } from "../../common/Header";
 import { useLocation } from "react-router-dom";
-import { PeopleTilesList } from "../PeopleList/styled";
-import { PeopleTile } from "../../common/tiles/PeopleTile";
+import { CreditsList } from "./CreditsList";
 
 export function MoviePage() {
     const dispatch = useDispatch();
     const location = useLocation();
-    const pathname = location.pathname.substring(14);
-    const id = pathname;
     const data = useSelector(selectCredits);
-    console.log(data)
-    const cast = data.cast;
     const elementData = useSelector(selectElement);
-
     const isLoading = useSelector(selectLoading);
     const isError = useSelector(selectError);
+    const pathname = location.pathname.substring(14);
+    const id = pathname;
 
     useEffect(() => {
         dispatch(fetchElement({ id }));
@@ -48,17 +44,9 @@ export function MoviePage() {
                         rate={elementData.vote_average}
                         votes={elementData.vote_count}
                         description={elementData.overview} />
+                        <CreditsList title="Cast" iterator={data.cast} />
+                        <CreditsList title="Crew" iterator={data.crew} />
                 </Container>
-
-                <PeopleTilesList>
-                    {data.map(({name}) => {
-                        console.log(name)
-                        return (
-                        <PeopleTile
-                            title={name} />
-                            
-                    )})}
-                </PeopleTilesList>
             </StateChecker>
         </>
     )
