@@ -6,14 +6,13 @@ import { fetchCommon, selectError, selectLoading } from "../../common/commonSlic
 import { Pagination } from "../../common/Pagination";
 import { StateChecker } from "../../common/StateChecker";
 import { Subtitle } from "../../common/Subtitle";
-import { PeopleTile } from "../../common/tiles/PeopleTile";
+import { PeopleTile } from "../../common/tiles/";
 import { fetchPeopleList, resetStatePeopleList, selectPeoplesByQuery, selectStatus, toggleStatus } from "./peopleListSlice";
 import { Header } from "../../common/Header";
 import { useQueryParameter } from "../../queryParameters";
 import { startPage } from "../../common/startPage";
 import { useUrlParameter } from "../urlHooks";
 import { PeopleTilesList } from "./styled";
-
 
 export const PeopleList = () => {
     const dispatch = useDispatch();
