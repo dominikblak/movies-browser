@@ -6,7 +6,7 @@ const elementSlice = createSlice({
         elementData: [],
         loading: true,
         error: false,
-        credits: {},
+        credits: [],
     },
     reducers: {
         fetchElement: (state) => {
@@ -42,7 +42,7 @@ const elementSlice = createSlice({
             state.error = true;
         },
         resetCreditsState: (state) => {
-            state.credits = {};
+            state.credits = [];
             state.loading = true;
             state.error = false;
         },
@@ -63,6 +63,6 @@ export const {
 export const selectElement = (state) => state.element.elementData;
 export const selectError = (state) => state.element.error;
 export const selectLoading = (state) => state.element.loading;
-export const selectCast = (state) => state.element.credits.cast;
+export const selectCredits = (state) => state.element.credits;
 
 export default elementSlice.reducer;
