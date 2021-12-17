@@ -16,8 +16,7 @@ export function MoviePage() {
     const elementData = useSelector(selectElement);
     const isLoading = useSelector(selectLoading);
     const isError = useSelector(selectError);
-    const pathname = location.pathname.substring(14);
-    const id = pathname;
+    const id = location.pathname.substring(14);
 
     useEffect(() => {
         dispatch(fetchElement({ id }));
@@ -29,11 +28,12 @@ export function MoviePage() {
         <>
             <Header />
             <StateChecker isLoading={isLoading} isError={isError}>
-                <MovieSlider
-                    title={elementData.title}
-                    backdrop={elementData.backdrop_path}
-                    rate={elementData.vote_average}
-                    votes={elementData.vote_count} />
+                {elementData.backdrop_path &&
+                    <MovieSlider
+                        title={elementData.title}
+                        backdrop={elementData.backdrop_path}
+                        rate={elementData.vote_average}
+                        votes={elementData.vote_count} />}
                 <Container>
                     <MovieTileDetails
                         poster_path={elementData.poster_path}

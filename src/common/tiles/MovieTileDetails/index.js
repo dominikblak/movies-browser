@@ -1,8 +1,9 @@
 import { Tags } from "../../Tags";
 import { Rating } from "../../Rating";
-import { Wrapper, Image, Content, DetailsWrapper, Title, Subtitle, MovieDetailsTitle, MovieDetailsWrapper, MovieDetails, MovieDescription, List, ListItem } from "./styled";
+import { Wrapper, Image, Content, DetailsWrapper, Title, Subtitle, MovieDetailsTitle, MovieDetailsWrapper, MovieDetails, MovieDescription, List, ListItem, NoImage } from "./styled";
 import { useSelector } from "react-redux";
 import { selectElement } from "../../../features/elementSlice";
+import emptyMoviePoster from "./images/emptyMoviePoster.svg";
 
 export function MovieTileDetails({ poster_path, title, subtitle, genres, rate, votes, description }) {
 
@@ -11,10 +12,14 @@ export function MovieTileDetails({ poster_path, title, subtitle, genres, rate, v
     return (
         <Wrapper>
             <Content>
-                <Image src={poster_path ? `https://image.tmdb.org/t/p/w500${poster_path}` : "no image"} alt={`${title} poster`} />
+                {poster_path ? (
+                    <Image src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={`${title} poster`} />
+                ) : (
+                    <NoImage src={emptyMoviePoster} />
+                )}
                 <DetailsWrapper>
                     <Title>{title}</Title>
-                    <Subtitle>{subtitle.slice(0, 4)}</Subtitle>
+                    {subtitle && <Subtitle>{subtitle.slice(0, 4)}</Subtitle>}
                     <MovieDetailsWrapper>
                         <MovieDetails>
                             <MovieDetailsTitle>Production:</MovieDetailsTitle>
@@ -24,9 +29,9 @@ export function MovieTileDetails({ poster_path, title, subtitle, genres, rate, v
                                 }
                             </List>
                         </MovieDetails>
-                        <MovieDetails>
+                        {subtitle && <MovieDetails>
                             <MovieDetailsTitle>Release date:</MovieDetailsTitle>{subtitle}
-                        </MovieDetails>
+                        </MovieDetails>}
                     </MovieDetailsWrapper>
                     <Tags movieDetailsGenres={genres} />
                     <Rating moviePageDetails rate={rate} votes={votes} />

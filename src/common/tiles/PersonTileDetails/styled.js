@@ -50,7 +50,7 @@ export const PersonalData = styled.div`
     gap: 16px;
   }
 `;
-export const ActorName = styled.h1`
+export const Header = styled.h1`
   font-size: 36px;
   margin-top: 8px;
   font-weight: 600;
@@ -123,5 +123,13 @@ export const Biography = styled.span`
     line-height: 16.9px;
     grid-column: 1 / -1;
     font-size: 13px;
+  }
+`;
+
+export const NoImage = styled(PersonPhoto)`
+    background-color: ${({ theme }) => theme.color.silver};
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+    height: 163px;
+    width: 116px;
   }
 `;

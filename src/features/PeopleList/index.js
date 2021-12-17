@@ -41,6 +41,7 @@ export const PeopleList = () => {
                         {results.map(({ id, profile_path, name }) => (
                             <PeopleTile
                                 key={id}
+                                id={id}
                                 poster_path={profile_path}
                                 title={name}
                             />
