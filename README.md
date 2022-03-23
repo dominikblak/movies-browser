@@ -53,6 +53,115 @@ In "Movies" section you will find information about movies such as: title, relea
 - githubPages
 - Scrum
 
+#### 🗃 Project structure :
+```
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📜danger.svg
+ ┃ ┣ 📜emptyMoviePoster.svg
+ ┃ ┣ 📜emptyPoster.svg
+ ┃ ┣ 📜noResult.svg
+ ┃ ┣ 📜search.svg
+ ┃ ┣ 📜spinner.svg
+ ┃ ┣ 📜star.svg
+ ┃ ┣ 📜vectorLeft.svg
+ ┃ ┣ 📜vectorRight.svg
+ ┃ ┗ 📜video.svg
+ ┣ 📂common
+ ┃ ┣ 📂Container
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂Error
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂Header
+ ┃ ┃ ┣ 📂Navigation
+ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┗ 📜styled.js
+ ┃ ┃ ┣ 📂Search
+ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┣ 📜searchQueryParamName.js
+ ┃ ┃ ┃ ┗ 📜styled.js
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂Loader
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂NoResults
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂Pagination
+ ┃ ┃ ┣ 📂NextArrow
+ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┗ 📜styled.js
+ ┃ ┃ ┣ 📂PreviousArrow
+ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┗ 📜styled.js
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂Rating
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂StateChecker
+ ┃ ┃ ┗ 📜index.js
+ ┃ ┣ 📂Subtitle
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂Tags
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂tiles
+ ┃ ┃ ┣ 📂MovieTile
+ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┗ 📜styled.js
+ ┃ ┃ ┣ 📂MovieTileDetails
+ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┗ 📜styled.js
+ ┃ ┃ ┣ 📂PersonTile
+ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┗ 📜styled.js
+ ┃ ┃ ┗ 📂PersonTileDetails
+ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂TilesList
+ ┃ ┃ ┗ 📜index.js
+ ┃ ┣ 📜apiConfiguration.js
+ ┃ ┣ 📜apiConnect.js
+ ┃ ┣ 📜commonSaga.js
+ ┃ ┣ 📜commonSlice.js
+ ┃ ┗ 📜startPage.js
+ ┣ 📂features
+ ┃ ┣ 📂MovieList
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┣ 📜movieListSaga.js
+ ┃ ┃ ┗ 📜movieListSlice.js
+ ┃ ┣ 📂MoviePage
+ ┃ ┃ ┣ 📂MovieSlider
+ ┃ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┃ ┗ 📜styled.js
+ ┃ ┃ ┗ 📜index.js
+ ┃ ┣ 📂PeopleList
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┣ 📜peopleListSaga.js
+ ┃ ┃ ┣ 📜peopleListSlice.js
+ ┃ ┃ ┗ 📜styled.js
+ ┃ ┣ 📂PersonPage
+ ┃ ┃ ┣ 📜index.js
+ ┃ ┃ ┣ 📜personSaga.js
+ ┃ ┃ ┗ 📜personSlice.js
+ ┃ ┣ 📜elementSaga.js
+ ┃ ┣ 📜elementSlice.js
+ ┃ ┗ 📜urlHooks.js
+ ┣ 📜App.js
+ ┣ 📜GlobalStyle.js
+ ┣ 📜index.js
+ ┣ 📜queryParameters.js
+ ┣ 📜reportWebVitals.js
+ ┣ 📜rootSaga.js
+ ┣ 📜store.js
+ ┗ 📜theme.js
+ ```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
